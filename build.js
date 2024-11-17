@@ -1,6 +1,9 @@
 #!/usr/bin/env node
 import * as esbuild from 'esbuild';
 import bookmarkletPlugin from 'esbuild-plugin-bookmarklet';
+import { mkdirSync } from 'fs';
+
+mkdirSync('dist', { recursive: true });
 
 try {
 	await esbuild.build({
